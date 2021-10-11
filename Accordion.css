@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css?family=poppins:200,300,400,500,600,700&dispaly=swap');
+*{
+    margin: 0%;
+    padding: 0%:;
+    box-sizzing:border-box;
+    font-family:'poppins',sans-serif;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: chartreuse;
+
+}
+.accordion{
+    max-width: 800px;
+}
+.accordion.contentBox{
+    position: relative;
+    margin: 10px 20px;
+}
+.accordion.contentBox.label{
+    position: relative;
+    padding: 10px;
+    background: #2694af;
+    color: #ffff;
+    cursor: pointer;
+}
+.accordion.contentBox.label::before{
+    content:'+';
+    position:absolute;
+    top:50%;
+    right:20px;
+    transform:translate(-50%);
+    font-size:1.5em;
+}
+.accordion.contentBox.accordion.contentBox{
+    position:relative;
+    background:chartreuse;
+    height: 0;
+    overflow:hidden;
+    transition:0.5s;
+    overflow:auto;
+}
+.accordion.contentBox.active.accordion.contentBox{
+    height: 150px;
+    padding: 10px;
+}
+   
+
+
