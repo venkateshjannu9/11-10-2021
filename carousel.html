@@ -1,0 +1,112 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>auto slide testimonial carousel using css 3</title>
+        <style>
+            body{
+                font-family:tahoma;
+                overflow-x:hidden;
+                background-image:url(ur.jpg);
+            }
+            .hi-slide
+            {
+                position: relative;
+                width:754px;
+                height:292px;
+                margin:115px auto 0;
+            }
+            .hi-slide.hi-next,
+            .hi-slide.hi-prev{
+                position: absolute;
+                top: 50%;
+                width: 40px;
+                height: 40px;
+                margin-top: -20px;
+                border-radius: 50px;
+                line-height: 40px;
+                cursor: pointer;
+                background-color: white;
+                color: black;
+                transition: all 0.7s;
+                font-size:20px;
+                font-weight:bold;
+            }
+            .hi-slide.hi-next:hover,
+            .hi-slide.hi-prev:hover{
+                opacity:1;
+                background-color: white;
+
+            }
+            .hi-slide.hi-prev{
+                left:-70px;
+            }
+            .hi-slide.hi.prev::before{
+                content:'<';
+
+            }
+            .hi-slide.hi-next
+            {
+                right: -70px;
+            }
+            .hi-slide.hi-next::before{
+                content:'>'
+            }
+            .hi-slide > ul{
+                    list-style: none;
+                    position:relative;
+                    width: 754px;
+                    height: 292;
+                    margin: 0;
+                    padding:0;
+                }
+                .hi-slide>ul>li{
+                    overflow:hidden;
+                    position:absolute;
+                    z-index:0;
+                    left:377px;
+                    top:147;
+                    width: 0;
+                    height: 0;
+                    margin: 0;
+                    padding: 0;
+                    border: 3px solid white;
+                    background-color: #333;
+                    cursor: pointer;
+                }
+                .hi-slide > ul  > li >img{
+                    width: 100px;
+                    height: 100%;
+                    background-position: center;
+                }
+                
+            
+        </style>
+    </head>
+    <body>
+        <div class="slide hi-slide">
+            <div class="hi-prev"></div>
+            <div class="hi-next"></div>
+            <ul>
+                <li>
+                    <img src="https://www.google.co.in/imgres?imgurl=https%3A%2F%2Fmedia.cntraveler.com%2Fphotos%2F575eef34ba256ed2737af5c4%2F16%3A9%2Fw_2560%252Cc_limit%2Fjetson-the-cat-cr-cynthia-drescher-2.jpg&imgrefurl=https%3A%2F%2Fwww.cntraveler.com%2Fstories%2F2016-06-13%2Fhow-i-taught-my-cat-to-love-traveling&tbnid=kR2H8NJAstd3eM&vet=12ahUKEwj-m9WfzsHzAhWQfX0KHfD2BN4QMygEegUIARDRAQ..i&docid=gOzP65l6r2J4HM&w=2048&h=1152&q=my%20cat%20images&hl=en&ved=2ahUKEwj-m9WfzsHzAhWQfX0KHfD2BN4QMygEegUIARDRAQ" alt="">
+                </li>
+                <li>
+                    <img src="https://www.google.co.in/imgres?imgurl=https%3A%2F%2Fcdn.pixabay.com%2Fphoto%2F2015%2F04%2F23%2F22%2F00%2Ftree-736885__480.jpg&imgrefurl=https%3A%2F%2Fpixabay.com%2Fimages%2Fsearch%2Fsun%2F&tbnid=L8xfQakH9a8tJM&vet=12ahUKEwjLpprkzsHzAhXNm0sFHXZCBpIQMygBegUIARDMAQ..i&docid=T5n6IXZ5nFRelM&w=771&h=480&q=images&hl=en&ved=2ahUKEwjLpprkzsHzAhXNm0sFHXZCBpIQMygBegUIARDMAQ" alt="">
+                </li>
+                <li>
+                    <img src="https://www.google.co.in/imgres?imgurl=https%3A%2F%2Fimages.pexels.com%2Fphotos%2F1987301%2Fpexels-photo-1987301.jpeg%3Fauto%3Dcompress%26cs%3Dtinysrgb%26dpr%3D1%26w%3D500&imgrefurl=https%3A%2F%2Fwww.pexels.com%2Fsearch%2Fgirl%2F&tbnid=N_GnVowzVCJJtM&vet=12ahUKEwjLpprkzsHzAhXNm0sFHXZCBpIQMygJegUIARDdAQ..i&docid=Gjt9a2U7c6pwwM&w=500&h=750&q=images&hl=en&ved=2ahUKEwjLpprkzsHzAhXNm0sFHXZCBpIQMygJegUIARDdAQ" alt="">
+                </li>
+                <li>
+                    <img src="https://www.google.co.in/imgres?imgurl=https%3A%2F%2Fcdn.pixabay.com%2Fphoto%2F2017%2F02%2F08%2F17%2F24%2Ffantasy-2049567__480.jpg&imgrefurl=https%3A%2F%2Fpixabay.com%2Fimages%2Fsearch%2Fdreams%2F&tbnid=alsPfMz_uAYQ3M&vet=12ahUKEwjLpprkzsHzAhXNm0sFHXZCBpIQMygLegUIARDhAQ..i&docid=5RCYfMm9OBmNyM&w=853&h=480&q=images&hl=en&ved=2ahUKEwjLpprkzsHzAhXNm0sFHXZCBpIQMygLegUIARDhAQ" alt="">
+                </li>
+            </ul>
+        </div>
+        <script src="https://code.jquery.com/jquery-3.3.1.js">
+
+        </script>
+        <script src="js/jquery.hislide.js"></script>
+        <script>
+            $('.slide').hislide
+        </script>
+    </body>
+</html>
