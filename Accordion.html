@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Accordion | vanilla javascript
+        </title>
+        <link rel="stylrsheet" type="text/css" href="style.css">
+
+    </head>
+    <body>
+        <div class="Accordion">
+            <div class ="contentBox">
+                <div class ="label>"List one</div>
+                <div class="content">
+                    <p>Lorem ipsum dolor sit amet,consectetur adipisiscing
+                        elit,sed to eiusmod tempor incident ut labore at dolor magna
+                        alique.ut enim ad minim ventiam,
+                        quis nostrud exeritation ullamco labories nisi ut consequant.
+
+                    </p>
+                </div>
+            </div>
+            <div class ="contentBox">
+                <div class ="label>"List two</div>
+                <div class="content">
+                    <p>Lorem ipsum dolor sit amet,consectetur adipisiscing
+                        elit,sed to eiusmod tempor incident ut labore at dolor magna
+                        alique.ut enim ad minim ventiam,
+                        quis nostrud exeritation ullamco labories nisi ut consequant.
+                        
+                    </p>
+                </div>
+            </div>
+            <div class ="contentBox">
+                <div class ="label>"List three</div>
+                <div class="content">
+                    <p>Lorem ipsum dolor sit amet,consectetur adipisiscing
+                        elit,sed to eiusmod tempor incident ut labore at dolor magna
+                        alique.ut enim ad minim ventiam,
+                        quis nostrud exeritation ullamco labories nisi ut consequant.
+                        
+                    </p>
+                </div>
+            </div>
+            <div class ="contentBox">
+                <div class ="label>"List four</div>
+                <div class="content">
+                    <p>Lorem ipsum dolor sit amet,consectetur adipisiscing
+                        elit,sed to eiusmod tempor incident ut labore at dolor magna
+                        alique.ut enim ad minim ventiam,
+                        quis nostrud exeritation ullamco labories nisi ut consequant.
+                        
+                    </p>
+                </div>
+            </div>
+        </div>
+        <script>
+            const accordion=document.getElementsByClassName
+            ('contentBox');
+            for(i=0;i<accordion.length;i++)
+            {
+                accordion[i].addEventListner('click',function(){
+                    this.classList.toggle('active')
+                })
+            }
+        </script>
+    
+    </body>
+</html>
